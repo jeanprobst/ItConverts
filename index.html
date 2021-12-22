@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>It Converts</title>
+</head>
+<body>
+    <header>
+        <h1>It Converts</h1>
+    </header>
+    <section class="intro">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ea quisquam sint illo perferendis a, praesentium provident exercitationem in cupiditate ratione minima eaque beatae iste reiciendis cumque nobis! Id, repellendus.
+        </p>
+    </section>
+    </section class="calculus">
+        <section id="primary">
+            <label for="kind">Choose the kind of conversion</label>
+            <form name="form1" method="post">
+                <select name="kind" id="kind" onchange="myFunction()">
+                    <!-- https://sciencing.com/types-measurements-used-measuring-outer-space-14340.html -->
+                    <option value="distance">Distance</option>
+                    <option value="space">Space</option>
+                    <option value="speed">Speed</option>
+                    <option value="weight">Weight</option>
+                    <option value="temp">Temperature</option>
+
+                    <!-- Leave the measurements below for later on -->
+
+                    <!-- <option value="volume">Volume</option>
+                    <option value="area">Area</option>
+                    <option value="math-general">General math</option> -->
+                </select>
+            </form>
+        </section><br><br>
+        <section id="convert-to">
+            <label for="kind-options">Choose the unit to convert from</label>
+        
+            <select name="kind-options" id="distance" hidden>
+                <option value="milimeter">Milimeter</option>
+                <option value="centimeter">Centimeter</option>
+                <option value="meter">Meter</option>
+                <option value="kilometer">Kilometer</option>
+                <option value="miles">Miles</option>
+                <option value="inches">Inches</option>
+                <option value="feet">Feet</option>
+                <option value="yards">Yards</option>
+            </select>
+            <select name="kind-options" id="space" class="space" hidden>
+                <option value="au">Astronomical Units</option>
+                <option value="parsec">Parsec</option>
+                <option value="kilometer">Kilometer</option>
+                <option value="miles">Miles</option>
+                <option value="parsec">Parsec</option>
+                <option value="au">Astronomical Unit</option>
+            </select>
+            <select name="kind-options" id="speed" class="speed" hidden>
+                <option value="km-h">Km/h</option>
+                <option value="m-s">m/s</option>
+                <option value="miles-h">M/h</option>
+            </select>
+            <select name="kind-options" id="weight" hidden>
+                <option value="picograms">Picograms</option>
+                <option value="nanograms">Nanograms</option>
+                <option value="miligrams">Miligrams</option>
+                <option value="grams">Grams</option>
+                <option value="kg">Kilograms</option>
+                <option value="tonne">Tonne</option>
+                <option value="megatonne">Megatonne</option>
+                <option value="gigatonne">Gigaonne</option>
+                <option value="pounds">Pounds</option>
+                <option value="ounds">Oz</option>
+                <option value="miles">Miles</option>
+                <option value="parsec">Parsec</option>
+                <option value="au">Astronomical Unit</option>
+            </select>
+            <select name="kind-options" id="temp" hidden>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="celsius">Celsius</option>
+                <option value="kelvin">Kelvin</option>
+            </select>
+            <label for="qty"></label>
+            <input type="number" name="qty" id="entry-value">
+            <br><br>
+        </section>
+        <section id="convert-from">
+            <label for="kind-options">Choose the unit to convert to</label>
+        
+            <select name="kind-options" id="distance-out" hidden>
+                <option value="milimeter">Milimeter</option>
+                <option value="centimeter">Centimeter</option>
+                <option value="meter">Meter</option>
+                <option value="kilometer">Kilometer</option>
+                <option value="miles">Miles</option>
+                <option value="inches">Inches</option>
+                <option value="feet">Feet</option>
+                <option value="yards">Yards</option>
+            </select>
+            <select name="kind-options" id="space-out" class="space-out" hidden>
+                <option value="au">Astronomical Units</option>
+                <option value="parsec">Parsec</option>
+                <option value="kilometer">Kilometer</option>
+                <option value="miles">Miles</option>
+                <option value="parsec">Parsec</option>
+                <option value="au">Astronomical Unit</option>
+            </select>
+            <select name="kind-options" id="speed-out" class="speed-out" hidden>
+                <option value="km-h">Km/h</option>
+                <option value="m-s">m/s</option>
+                <option value="miles-h">M/h</option>
+            </select>
+            <select name="kind-options" id="weight-out" hidden >
+                <option value="picograms">Picograms</option>
+                <option value="nanograms">Nanograms</option>
+                <option value="miligrams">Miligrams</option>
+                <option value="grams">Grams</option>
+                <option value="kg">Kilograms</option>
+                <option value="tonne">Tonne</option>
+                <option value="megatonne">Megatonne</option>
+                <option value="gigatonne">Gigaonne</option>
+                <option value="pounds">Pounds</option>
+                <option value="ounds">Oz</option>
+                <option value="miles">Miles</option>
+                <option value="parsec">Parsec</option>
+                <option value="au">Astronomical Unit</option>
+            </select>
+            <select name="kind-options" id="temp-out" hidden>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="celsius">Celsius</option>
+                <option value="kelvin">Kelvin</option>
+            </select>
+            <label for="qty2"></label>
+            <input type="number" name="qty2" id="outcome-value">
+            <br><br>
+        </section>
+    </section>
+    <div class="result">
+        <label for="result">Result</label>
+        <input type="number" name="result" id="result" readonly>
+    </div>
+    <script src="/main.js"></script>
+</body>
+</html>
