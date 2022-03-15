@@ -20,24 +20,20 @@
             <form name="form1" method="post">
                 <select name="kind" id="kind" onchange="myFunction()">
                     <!-- https://sciencing.com/types-measurements-used-measuring-outer-space-14340.html -->
+                    <option value="---">Choose an option</option>
                     <option value="distance">Distance</option>
-                    <option value="space">Space</option>
-                    <option value="speed">Speed</option>
-                    <option value="weight">Weight</option>
-                    <option value="temp">Temperature</option>
-
-                    <!-- Leave the measurements below for later on -->
-
-                    <!-- <option value="volume">Volume</option>
-                    <option value="area">Area</option>
-                    <option value="math-general">General math</option> -->
+                    <option value="space" disabled>Space</option>
+                    <option value="speed" disabled>Speed</option>
+                    <option value="weight" disabled>Weight</option>
+                    <option value="temp" disabled>Temperature</option>
                 </select>
             </form>
         </section><br><br>
         <section id="convert-to">
-            <label for="kind-options">Choose the unit to convert from</label>
+            <label for="kind-options">Choose the unit to convert <strong>from</strong></label>
         
             <select name="kind-options" id="distance" hidden>
+                <option value="---">choose an option</option>
                 <option value="milimeter">Milimeter</option>
                 <option value="centimeter">Centimeter</option>
                 <option value="meter">Meter</option>
@@ -81,21 +77,22 @@
                 <option value="kelvin">Kelvin</option>
             </select>
             <label for="qty"></label>
-            <input type="number" name="qty" id="entry-value">
+            <input type="number" name="qty" id="entry-value" onchange="check()">
             <br><br>
         </section>
         <section id="convert-from">
-            <label for="kind-options">Choose the unit to convert to</label>
+            <label for="kind-options">Choose the unit to convert <strong>to</strong></label>
         
-            <select name="kind-options" id="distance-out" hidden>
-                <option value="milimeter">Milimeter</option>
-                <option value="centimeter">Centimeter</option>
-                <option value="meter">Meter</option>
-                <option value="kilometer">Kilometer</option>
-                <option value="miles">Miles</option>
+            <select name="kind-options" id="distance-out" onchange="check()" hidden>
+                <option value="---">choose an option</option>
+                <option value="milimeter" disabled>Milimeter</option>
+                <option value="centimeter" disabled>Centimeter</option>
+                <option value="meter" disabled>Meter</option>
+                <option value="kilometer" disabled>Kilometer</option>
+                <option value="miles" disabled>Miles</option>
                 <option value="inches">Inches</option>
                 <option value="feet">Feet</option>
-                <option value="yards">Yards</option>
+                <option value="yards" disabled>Yards</option>
             </select>
             <select name="kind-options" id="space-out" class="space-out" hidden>
                 <option value="au">Astronomical Units</option>
@@ -131,14 +128,10 @@
                 <option value="kelvin">Kelvin</option>
             </select>
             <label for="qty2"></label>
-            <input type="number" name="qty2" id="outcome-value">
+            <input type="number" name="qty2" id="outcome-value" disabled>
             <br><br>
         </section>
     </section>
-    <div class="result">
-        <label for="result">Result</label>
-        <input type="number" name="result" id="result" readonly>
-    </div>
     <script src="/main.js"></script>
 </body>
 </html>
